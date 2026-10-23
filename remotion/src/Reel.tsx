@@ -34,6 +34,7 @@ export type EditProps = {
   audio?: string; // voice-over / mixed track in public/
   music?: { src: string; volume: number };
   overlay?: { from: number; strength: number };
+  captions?: { top: number; size: number }; // vertical centre of the type (of 1920) and max keyword size
   scenes: Scene[];
   pages: Page[];
 };
@@ -74,7 +75,7 @@ const SceneView: React.FC<{ sc: Scene; t: number }> = ({ sc, t }) => {
   );
 };
 
-export const Reel: React.FC<EditProps> = ({ scenes, pages, audio, music, overlay }) => {
+export const Reel: React.FC<EditProps> = ({ scenes, pages, audio, music, overlay, captions }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
@@ -87,7 +88,7 @@ export const Reel: React.FC<EditProps> = ({ scenes, pages, audio, music, overlay
         </Sequence>
       ))}
       <BlackOverlay from={overlay?.from} strength={overlay?.strength} />
-      {page && <Lockup key={page.start} p={page} t={t} />}
+      {page && <Lockup key={page.start} p={page} t={t} y={captions?.top} base={captions?.size} />}
       {audio && <Audio src={staticFile(audio)} />}
       {music && <Audio src={staticFile(music.src)} volume={music.volume} loop />}
     </AbsoluteFill>

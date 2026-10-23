@@ -7,6 +7,10 @@
   "from": 0.58,
   "strength": 0.95
  },
+ "captions": {
+  "top": 1565,
+  "size": 178
+ },
  "scenes": [
   {
    "start": 0,

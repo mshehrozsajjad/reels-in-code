@@ -58,6 +58,7 @@ The classic arc (setup → build-up → climax → wrap-up) loses people on a fe
   "audio": "voice.mp3",                  // optional; otherwise the video's own sound plays
   "music": { "src": "bed.mp3", "volume": 0.08 },   // optional
   "overlay": { "from": 0.58, "strength": 0.95 },  // black gradient: where it starts, how dark
+  "captions": { "top": 1565, "size": 178 },        // where the type sits (of 1920) and the max keyword size
   "scenes": [
     { "start": 0, "dur": 9.2, "kind": "speaker", "src": "talking_head.mp4" },
     { "start": 9.2, "dur": 3.1, "kind": "inset", "src": "screen.mp4", "from": 4.0, "label": "BEFORE",

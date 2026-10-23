@@ -121,7 +121,7 @@ def main():
         scene["src"] = copy_in(a.video)
         scene["muted"] = bool(a.audio)  # use the video's own sound when there is no separate voice-over
     edit = {"fps": FPS, "width": 1080, "height": 1920, "durationInFrames": int(round(total * FPS)),
-            "overlay": {"from": 0.58, "strength": 0.95}, "scenes": [scene], "pages": pages}
+            "overlay": {"from": 0.58, "strength": 0.95}, "captions": {"top": 1565, "size": 178}, "scenes": [scene], "pages": pages}
     if a.audio:
         edit["audio"] = copy_in(a.audio)
     Path(a.out).write_text(json.dumps(edit, indent=1, ensure_ascii=False))

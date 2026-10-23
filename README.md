@@ -1,5 +1,7 @@
 # Reels in Code
 
+<p align="center"><img src="assets/reels-in-code.gif" alt="A note to Claude changes one line in the edit file, the reel re-renders, and the note becomes a rule" width="480"></p>
+
 Edit short vertical videos (Reels, TikToks, Shorts) without an editing app.
 The whole edit lives in one text file. You give Claude notes like you would to an editor, and every note that matters becomes a rule it remembers next time.
 
