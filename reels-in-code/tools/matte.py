@@ -1,6 +1,6 @@
 """Cut the person out of a video (for the "word behind the speaker" effect).
 
-    python tools/matte.py remotion/public/talking_head.mp4 remotion/public/talking_head_mask.webm
+    python <skill>/tools/matte.py public/talking_head.mp4 public/talking_head_mask.webm
 
 Writes a VP9 WebM with transparency: the person stays, the background is see-through.
 In edit.json, put it on the same scene as the footage:  "mask": "talking_head_mask.webm",

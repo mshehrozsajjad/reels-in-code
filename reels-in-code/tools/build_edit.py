@@ -1,8 +1,8 @@
-"""Turn a script + word timings into the edit file (remotion/public/edit.json).
+"""Turn a script + word timings into the edit file (<project>/public/edit.json).
 
-    python tools/build_edit.py --script script.txt --words words.json --video talking_head.mp4
-    python tools/build_edit.py --script script.txt --words words.json --audio voice.mp3            # type on black
-    python tools/build_edit.py --script script.txt --words words.json --audio voice.mp3 --video broll.mp4
+    python <skill>/tools/build_edit.py --project my-reel --script script.txt --words words.json --video talking_head.mp4
+    python <skill>/tools/build_edit.py --project my-reel --script script.txt --words words.json --audio voice.mp3            # type on black
+    python <skill>/tools/build_edit.py --project my-reel --script script.txt --words words.json --audio voice.mp3 --video broll.mp4
 
 script.txt: one line = one on-screen page, written as   small words above | KEYWORD | small words below
     this reel never touched an | editing app.
@@ -20,8 +20,7 @@ import shutil
 import subprocess
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-PUB = ROOT / "remotion" / "public"
+PUB = Path("public")  # set from --project in main()
 FPS = 30
 
 
@@ -80,6 +79,8 @@ def align(script_tokens, words):
 
 def copy_in(src):
     src = Path(src)
+    if src.resolve().parent == PUB.resolve():
+        return src.name
     PUB.mkdir(parents=True, exist_ok=True)
     dst = PUB / src.name
     if src.resolve() != dst.resolve():
@@ -93,8 +94,12 @@ def main():
     ap.add_argument("--words", required=True)
     ap.add_argument("--video", help="footage shown full screen (its own sound is used if no --audio)")
     ap.add_argument("--audio", help="separate voice-over")
-    ap.add_argument("--out", default=str(PUB / "edit.json"))
+    ap.add_argument("--project", default=".", help="the reel project folder (made from the template)")
+    ap.add_argument("--out", help="default: <project>/public/edit.json")
     a = ap.parse_args()
+    global PUB
+    PUB = Path(a.project) / "public"
+    a.out = a.out or str(PUB / "edit.json")
     if not a.video and not a.audio:
         raise SystemExit("give --video, --audio, or both")
 

@@ -10,7 +10,7 @@ import { BlackOverlay, Lockup, MaskWord, Page, TYPE } from "./style/StyleC";
     "inset"    a smaller video or image window on black (screen recordings, other clips)
     "black"    plain black (type only)
   optional on any scene
-    mask + maskWord   a giant word behind the person (mask = alpha video made by tools/matte.py)
+    mask + maskWord   a giant word behind the person (mask = alpha video made by the skill's tools/matte.py)
 */
 
 export type Scene = {
