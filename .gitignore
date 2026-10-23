@@ -1,0 +1,10 @@
+node_modules
+remotion/out/
+tools/models/
+__pycache__/
+*.mp4
+*.mov
+*.webm
+*.mp3
+*.wav
+!remotion/public/edit.json

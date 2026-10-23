@@ -1,0 +1,151 @@
+{
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationInFrames": 285,
+ "overlay": {
+  "from": 0.58,
+  "strength": 0.95
+ },
+ "scenes": [
+  {
+   "start": 0,
+   "dur": 9.5,
+   "kind": "black"
+  }
+ ],
+ "pages": [
+  {
+   "before": [
+    {
+     "w": "this",
+     "s": 0.0
+    },
+    {
+     "w": "reel",
+     "s": 0.3
+    },
+    {
+     "w": "never",
+     "s": 0.6
+    },
+    {
+     "w": "touched",
+     "s": 0.9
+    },
+    {
+     "w": "an",
+     "s": 1.2
+    }
+   ],
+   "key": [
+    {
+     "w": "editing",
+     "s": 1.5
+    },
+    {
+     "w": "app.",
+     "s": 1.8
+    }
+   ],
+   "after": [],
+   "start": 0.0,
+   "edge": "right",
+   "end": 3.1
+  },
+  {
+   "before": [
+    {
+     "w": "Every",
+     "s": 3.1
+    },
+    {
+     "w": "frame",
+     "s": 3.4
+    },
+    {
+     "w": "was",
+     "s": 3.7
+    },
+    {
+     "w": "written",
+     "s": 4.0
+    },
+    {
+     "w": "as",
+     "s": 4.3
+    }
+   ],
+   "key": [
+    {
+     "w": "code.",
+     "s": 4.6
+    }
+   ],
+   "after": [],
+   "start": 3.1,
+   "edge": "left",
+   "end": 5.6
+  },
+  {
+   "before": [
+    {
+     "w": "I",
+     "s": 5.6
+    },
+    {
+     "w": "give",
+     "s": 5.9
+    },
+    {
+     "w": "Claude",
+     "s": 6.2
+    }
+   ],
+   "key": [
+    {
+     "w": "notes,",
+     "s": 6.5
+    }
+   ],
+   "after": [],
+   "start": 5.6,
+   "edge": "right",
+   "end": 7.2
+  },
+  {
+   "before": [
+    {
+     "w": "like",
+     "s": 7.2
+    },
+    {
+     "w": "I",
+     "s": 7.5
+    },
+    {
+     "w": "would",
+     "s": 7.8
+    },
+    {
+     "w": "to",
+     "s": 8.1
+    },
+    {
+     "w": "an",
+     "s": 8.4
+    }
+   ],
+   "key": [
+    {
+     "w": "editor.",
+     "s": 8.7
+    }
+   ],
+   "after": [],
+   "start": 7.2,
+   "edge": "left",
+   "end": 9.5
+  }
+ ]
+}

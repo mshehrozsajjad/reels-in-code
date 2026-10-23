@@ -1,0 +1,5 @@
+# one line = one on-screen page:   small words above | KEYWORD | small words below
+this reel never touched an | editing app.
+Every frame was written as | code.
+I give Claude | notes,
+like I would to an | editor.
