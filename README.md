@@ -1,10 +1,10 @@
 # Reels in Code
 
-<p align="center"><img src="assets/reels-in-code.gif" alt="A plain talking clip, a note to Claude, one change in the edit file, and the same clip re-rendered with captions and a giant word behind the speaker" width="480"></p>
-
 **A Claude skill that makes a whole reel from your idea.** Tell it what the video is about. It writes 3 hooks, writes the script, plans every shot, and asks only for the clips it needs. You send them, and it edits and renders the reel — as code, with no editing app.
 
 Works with **any footage** (phone, camera, screen recordings, AI avatar) and **any voice** (your own, or any text-to-speech). Runs in the Claude app and in Claude Code.
+
+<p align="center"><img src="assets/reels-in-code.gif" alt="A plain talking clip, a note to Claude, one change in the edit file, and the same clip re-rendered with captions and a giant word behind the speaker" width="100%"></p>
 
 ## How it goes
 
